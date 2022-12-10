@@ -1,0 +1,3 @@
+use('newBe')
+
+db.cities.find()
