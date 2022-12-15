@@ -41,6 +41,9 @@ const PORT = process.env.PORT || 3001;
 const index_routes = require("./routes/index.routes");
 
 app.use("/api/v1", index_routes);
+app.get("/", (req, res) => {
+   return res.send("running");
+})
 
 // db connection
 mongoose.connect("mongodb://0.0.0.0:27017/userData").then(() => console.log("MongoDb : START"));
